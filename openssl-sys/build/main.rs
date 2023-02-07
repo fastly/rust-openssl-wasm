@@ -80,8 +80,7 @@ fn main() {
     let src_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
 
     env::set_var( "OPENSSL_STATIC","1");
-    env::set_var( "OPENSSL_LIB_DIR",format!("{}/../openssl-wasm/precompiled/lib", src_dir));
-    env::set_var( "OPENSSL_INCLUDE_DIR",format!("{}/../openssl-wasm/precompiled/include", src_dir));
+    env::set_var( "OPENSSL_DIR",format!("{}/../openssl-wasm/precompiled", src_dir));
 
     check_rustc_versions();
 
